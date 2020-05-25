@@ -85,7 +85,7 @@ client.on("message", (msg) => {
               allow: ['READ_MESSAGE_HISTORY'],
             },
             {
-              roles: role,
+              id: role.id,
               allow: ['READ_MESSAGES','READ_MESSAGE_HISTORY',],
             },
             {
