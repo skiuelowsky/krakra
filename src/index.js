@@ -61,7 +61,7 @@ client.on("message", (msg) => {
   }
   if (msg.content.startsWith("-zamowienie"))
   {
-    if (channel.id==="664535553987051550")
+    if (channel.id==="714484679096533043")
     {
 
       const tresc = msg.content.slice(12)
