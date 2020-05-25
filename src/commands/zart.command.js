@@ -5,7 +5,7 @@ module.exports = {
     run(msg, args) {
       const {Client, RichEmbed, GuildMember} = require("discord.js")
       const { author, guild, channel,} = msg
-      if (msg.content === ".zart")
+      if (msg.content === "-zart")
   {
     let zart = 0;
     zart = (Math.round (Math.random () * 59 ))
