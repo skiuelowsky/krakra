@@ -9,7 +9,7 @@ module.exports = {
   {
     const embed = new RichEmbed()
   
-    .setTitle(`Aby zagrac wpisz .knp kamien/papier/nozyce`)
+    .setTitle(`Aby zagrac wpisz -knp kamien/papier/nozyce`)
   
     .setColor(0xff00e7)
   
