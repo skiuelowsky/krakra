@@ -55,7 +55,8 @@ client.on("message", (msg) => {
       
       guild.createRole({name: msg.author.username})
       const role = msg.guild.roles.find(role => role.name = msg.author.username);
-      msg.author.addRole(role)
+      const member = msg.author
+      msg.member.addRole(role)
 
       const embed = new RichEmbed()
       .setTitle(`Zamówienie ${msg.author.username}`)
