@@ -56,7 +56,7 @@ async function elo() {
 }
 //Weryfikacja
 client.on("message", (msg) => {
-  if (author.bot || !guild) {
+  if (!guild) {
     return
   }
   const { channel, guild } = msg
