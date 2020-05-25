@@ -69,7 +69,7 @@ client.on("message", (msg) => {
         return
       }
 
-        guild.createChannel(`${msg.author.username}`, {
+        guild.createChannel(`zamówienie-${msg.author.username}`, {
           type: 'text',
           permissionOverwrites: [
             {
@@ -96,8 +96,17 @@ client.on("message", (msg) => {
       if (!category) throw new Error("Category channel does not exist");
        channel.setParent(category.id).then(
        channel.send(embed)
-       
+      
     )
+    .then(channel => {
+      const channel = client.channels.find(channel => channel.name = msg.author.username)
+      const role = guild.roles.find(role => role.id === "664533954535358464")
+      channel.overwritePermissions(role,
+        {
+          VIEW_CHANNEL: true,
+          SEND_MESSAGES: true
+      })
+    })
   }).catch(console.error);
       
       const embed = new RichEmbed()
