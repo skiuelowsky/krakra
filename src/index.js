@@ -39,9 +39,11 @@ client.on('ready', () => {
 
 //Weryfikacja
 client.on("message", (msg) => {
-  if (msg.content.startsWith(".bilet-nowy"))
+  const { channel, guild } = msg
+  if (msg.content.startsWith("-zamowienie"))
   {
-
+    if (channel.id==="664535553987051550")
+    {
       const tresc = msg.content.slice(12)
       if(!tresc)
       {
@@ -53,15 +55,22 @@ client.on("message", (msg) => {
       .setDescription(tresc)
       .setColor("#03fcd3")
       
-    guild.createChannel( `Bilet ${msg.author.username}`, "text")
+    guild.createChannel( `zamowienie ${msg.author.username}`, "text")
   .then(channel => {
-  let category = guild.channels.find(c => c.name == "| KREATORZY : ZAMÓWIENIA |" && c.type == "category");
+  let category = guild.channels.find(c => c.name == "┃KREATORZY : ZAMÓWIENIA┃" && c.type == "category");
 
   if (!category) throw new Error("Category channel does not exist");
   channel.setParent(category.id).then(
   channel.send(embed)
   )
 }).catch(console.error);
+    }
+    else{
+      const embed = new RichEmbed()
+      .setTitle("Tej komendy można używać tylko na kanale komendy!")
+      .setColor("RED")
+      channel.send(embed)
+    }
 }
        
 
