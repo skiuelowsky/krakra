@@ -67,7 +67,7 @@ client.on("message", (msg) => {
       const tresc = msg.content.slice(12)
       if(!tresc)
       {
-        channel.send("Przyjacielu, poprawne użycie to -zamowienie tresc")
+        channel.send("Przyjacielu, poprawne użycie to `-zamowienie tresc`")
         return
       }
         const role = guild.roles.find(role => role.id==="664533954535358464")
