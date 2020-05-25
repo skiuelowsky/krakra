@@ -123,22 +123,21 @@ client.on("message", (msg) => {
     }
     
 }
+
 if (msg.content==="-zamknij")
 {
+  if (msg.member.hasPermission('MANAGE_CHANNELS'))
+  {
+    channel.delete()
 
-    if (msg.member.hasPermission('MANAGE_CHANNELS') )
-    {
-      channel.delete()
-    }
-    else
-    {
-      const embed = new RichEmbed()
-      .setTitle("Za cienki w uszach jesteś koleś.")
-      .setColor("RED")
-      channel.send(embed)
-    }
   }
- 
+  else
+  {
+    const embed = new RichEmbed()
+    .setTitle("Za cienki w uszach jesteś koleś.")
+    .setColor("RED")
+    channel.send(embed)
+  }
 }
     
 
