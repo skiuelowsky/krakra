@@ -68,7 +68,7 @@ client.on("message", (msg) => {
         channel.send("Przyjacielu, poprawne użycie to -zamowienie tresc")
         return
       }
-
+        const role = guild.roles.find(role => role.id==="664533954535358464")
         guild.createChannel(`zamówienie-${msg.author.username}`, {
           type: 'text',
           permissionOverwrites: [
@@ -85,6 +85,10 @@ client.on("message", (msg) => {
               allow: ['READ_MESSAGE_HISTORY'],
             },
             {
+              role: role,
+              allow: ['READ_MESSAGES','READ_MESSAGE_HISTORY',],
+            },
+            {
               id: msg.author.id,
               allow: ['READ_MESSAGES','READ_MESSAGE_HISTORY',],
             },
@@ -98,15 +102,7 @@ client.on("message", (msg) => {
        channel.send(embed)
       
     )
-    .then(channel => {
-      channel = client.channels.find(channel => channel.name = `zamówienie-${msg.author.username}`)
-      const role = guild.roles.find(role => role.id === "664533954535358464")
-      channel.overwritePermissions(role,
-        {
-          VIEW_CHANNEL: true,
-          SEND_MESSAGES: true
-      })
-    })
+
   }).catch(console.error);
       
       const embed = new RichEmbed()
