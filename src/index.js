@@ -119,7 +119,7 @@ client.on("message", (msg) => {
     }
     else{
       const embed = new RichEmbed()
-      .setTitle(`Tej komendy można używać tylko na kanale ${menchan}!`)
+      .setDescription(`Tej komendy można używać tylko na kanale <#714484679096533043> !`)
       .setColor("RED")
       channel.send(embed)
     }
