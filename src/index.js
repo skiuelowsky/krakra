@@ -63,7 +63,7 @@ client.on("message", (msg) => {
   }
   if (msg.content.startsWith("-zamowienie"))
   {
-
+  var menchan = msg.guild.channels.get('714484679096533043').toString()
     if (channel.id==="714484679096533043")
     {
 
@@ -119,7 +119,7 @@ client.on("message", (msg) => {
     }
     else{
       const embed = new RichEmbed()
-      .setTitle(`Tej komendy można używać tylko na kanale #📘┃złóż-zamówienie !`)
+      .setTitle(`Tej komendy można używać tylko na kanale ${menchan}!`)
       .setColor("RED")
       channel.send(embed)
     }
