@@ -17,7 +17,7 @@ module.exports = {
     
   }
   
-  if (msg.content === ".knp kamien")
+  if (msg.content === "knp kamien")
   {
     let losowa_liczba = 0;
     losowa_liczba = losowa_liczba = (Math.round (Math.random () * 2))
@@ -58,7 +58,7 @@ module.exports = {
     }
   }
   
-  if (msg.content === ".knp papier")
+  if (msg.content === "knp papier")
   {
     let losowa_liczba = 0;
     losowa_liczba = losowa_liczba = (Math.round (Math.random () * 2))
@@ -99,7 +99,7 @@ module.exports = {
     }
   }
   
-  if (msg.content === ".knp nozyce")
+  if (msg.content === "knp nozyce")
   {
     let losowa_liczba = 0;
     losowa_liczba = losowa_liczba = (Math.round (Math.random () * 2))
