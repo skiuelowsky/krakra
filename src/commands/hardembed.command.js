@@ -11,7 +11,7 @@ module.exports = {
       if(!sprawdzanie)
       {
         const embed = new RichEmbed()
-        .setTitle("Poprawne użycie : .hardembed |kolor|tytul|obrazek|opis")
+        .setTitle("Poprawne użycie : -hardembed |kolor|tytul|obrazek|opis")
         .setColor("#fc0303")
         .setDescription("Jeśli chcesz aby dane pole było puste zrób tak: | |")
         channel.send(embed)
