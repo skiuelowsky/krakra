@@ -51,15 +51,16 @@ client.on('ready', () => {
       client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
   }, 10000);
 });
-async function elo() {
-
+if (author.bot || !guild) {
+  return
 }
 //Weryfikacja
 client.on("message", (msg) => {
-  if (!guild) {
+
+  const { channel, guild, author } = msg
+  if (author.bot || !guild) {
     return
   }
-  const { channel, guild } = msg
   if (msg.content.startsWith("-zamowienie"))
   {
     if (channel.id==="664535553987051550")
