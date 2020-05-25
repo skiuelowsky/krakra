@@ -69,14 +69,6 @@ client.on("message", (msg) => {
         return
       }
 
-   
-      let rolaid = 0
-      msg.guild.createRole({
-        name: msg.author.username, 
-        color: "#ff0000"
-      }).then(role => {
-        msg.member.addRole(role)
-        rolaid = role.id
         guild.createChannel(`${msg.author.username}`, {
           type: 'text',
           permissionOverwrites: [
@@ -94,7 +86,7 @@ client.on("message", (msg) => {
             },
             {
               id: msg.author.id,
-              allow: ['READ_MESSAGES','READ_MESSAGE_HISTORY'],
+              allow: ['READ_MESSAGES','READ_MESSAGE_HISTORY',],
             },
           ],
         })
