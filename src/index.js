@@ -99,9 +99,7 @@ client.on("message", (msg) => {
        
     )
   }).catch(console.error);
-      })
-
-
+      
       const embed = new RichEmbed()
       .setTitle(`Zamówienie ${msg.author.username}`)
       .setDescription(tresc)
