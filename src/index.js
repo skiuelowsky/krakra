@@ -63,7 +63,7 @@ client.on("message", (msg) => {
   }
   if (msg.content.startsWith("-zamowienie"))
   {
-    const zamowienie = guild.channels.find(channel => channel.id==="664533954535358464")
+
     if (channel.id==="714484679096533043")
     {
 
@@ -119,7 +119,7 @@ client.on("message", (msg) => {
     }
     else{
       const embed = new RichEmbed()
-      .setTitle(`Tej komendy można używać tylko na kanale ${zamowienie}!`)
+      .setTitle(`Tej komendy można używać tylko na kanale #📘┃złóż-zamówienie !`)
       .setColor("RED")
       channel.send(embed)
     }
