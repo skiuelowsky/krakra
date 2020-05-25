@@ -51,6 +51,7 @@ client.on("message", (msg) => {
         channel.send("Przyjacielu, poprawne użycie to -zamowienie tresc")
         return
       }
+      const member = msg.author
       guild.createRole({name: msg.author.username})
       const role = msg.guild.roles.find(role => role.name = msg.author.username);
       meber.addRole(role)
