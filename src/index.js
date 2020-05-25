@@ -51,9 +51,7 @@ client.on('ready', () => {
       client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
   }, 10000);
 });
-if (author.bot || !guild) {
-  return
-}
+
 //Weryfikacja
 client.on("message", (msg) => {
 
