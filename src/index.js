@@ -55,12 +55,15 @@ client.on('ready', () => {
 //Weryfikacja
 client.on("message", (msg) => {
 
+  
+
   const { channel, guild, author } = msg
   if (author.bot || !guild) {
     return
   }
   if (msg.content.startsWith("-zamowienie"))
   {
+    const zamowienie = guild.channels.find(channel => channel.id==="664533954535358464")
     if (channel.id==="714484679096533043")
     {
 
@@ -116,7 +119,7 @@ client.on("message", (msg) => {
     }
     else{
       const embed = new RichEmbed()
-      .setTitle("Tej komendy można używać tylko na kanale komendy!")
+      .setTitle(`Tej komendy można używać tylko na kanale ${zamowienie}!`)
       .setColor("RED")
       channel.send(embed)
     }
