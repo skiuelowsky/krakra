@@ -99,7 +99,7 @@ client.on("message", (msg) => {
       
     )
     .then(channel => {
-      const channel = client.channels.find(channel => channel.name = msg.author.username)
+      channel = client.channels.find(channel => channel.name = msg.author.username)
       const role = guild.roles.find(role => role.id === "664533954535358464")
       channel.overwritePermissions(role,
         {
