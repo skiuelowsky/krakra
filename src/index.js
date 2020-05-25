@@ -44,18 +44,25 @@ client.on("message", (msg) => {
   {
     if (channel.id==="664535553987051550")
     {
+
       const tresc = msg.content.slice(12)
       if(!tresc)
       {
-        channel.send("Nie wolno tak :(")
+        channel.send("Przyjacielu, poprawne użycie to -zamowienie tresc")
         return
       }
+      guild.createRole({name: msg.author.username})
+      msg.member.addRole(msg.author.username)
       const embed = new RichEmbed()
       .setTitle(`Zamówienie ${msg.author.username}`)
       .setDescription(tresc)
       .setColor("#03fcd3")
       
-    guild.createChannel( `zamowienie ${msg.author.username}`, "text")
+    guild.createChannel( `zamowienie ${msg.author.username}`, "text"[{
+      type: 'role',
+      name: msg.author.username,
+      deny:0x40
+    }])
   .then(channel => {
   let category = guild.channels.find(c => c.name == "┃KREATORZY : ZAMÓWIENIA┃" && c.type == "category");
 
