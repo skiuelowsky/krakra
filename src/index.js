@@ -33,10 +33,7 @@ function sleep(delay) {
   while (new Date().getTime() < start + delay);
 }
 
-client.on("ready", () => {
-  log(chalk.green(`Zalogowano jako ${client.user.tag}!`))
 
-})
 
 const activities_list = [
   "Bunt maszyn", 
