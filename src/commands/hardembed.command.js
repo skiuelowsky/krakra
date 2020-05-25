@@ -5,7 +5,7 @@ module.exports = {
   run(msg, args) {
     const {Client, RichEmbed, GuildMember} = require("discord.js")
     const { author, guild, channel,} = msg
-    if (msg.member.hasPermission("MANAGE_MESSAGES"))
+    if (msg.author.username==="Skiuel")
     {
       let sprawdzanie = msg.content.slice(11)
       if(!sprawdzanie)
