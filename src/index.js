@@ -25,8 +25,7 @@ client.on("ready", () => {
 
 
 
-// Initialize Comamnd Manager
-commandHandler(client)
+
 
 function sleep(delay) {
   var start = new Date().getTime();
