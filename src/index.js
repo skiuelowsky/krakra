@@ -63,11 +63,7 @@ client.on("message", (msg) => {
       .setDescription(tresc)
       .setColor("#03fcd3")
       
-    guild.createChannel( `zamowienie ${msg.author.username}`, "text"[{
-      type: 'role',
-      name: msg.author.username,
-      deny:0x40
-    }])
+    guild.createChannel( `zamowienie ${msg.author.username}`, "text")
   .then(channel => {
   let category = guild.channels.find(c => c.name == "┃KREATORZY : ZAMÓWIENIA┃" && c.type == "category");
 
