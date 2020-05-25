@@ -64,6 +64,7 @@ client.on("message", (msg) => {
     {
 
       const tresc = msg.content.slice(12)
+      msg.delete()
       if(!tresc)
       {
         channel.send("Przyjacielu, poprawne użycie to `-zamowienie tresc`")
