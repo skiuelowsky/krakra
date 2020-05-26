@@ -3,6 +3,8 @@ module.exports = {
     description: "Losuje reszke albo orla albo kradziez monety",
   
     run(msg, args) {
+        const {Client, RichEmbed, GuildMember} = require("discord.js")
+        const { author, guild, channel,} = msg
 if (msg.content==="-przyjmij")
 {
   if (msg.member.roles.find(r => r.name === "🛠|Kreator"))
