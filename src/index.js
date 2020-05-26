@@ -141,7 +141,7 @@ if (msg.content === "-zamknij")
     
 if (msg.content.startsWith("-klient"))
 {
-  if (msg.member.username==="Skiuel")
+  if (msg.author.username==="Skiuel")
   {
       let member = msg.mentions.users.first()
       let clientrole = guid.roles.find(r => r.id === "664534018632712193")
