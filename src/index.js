@@ -125,6 +125,10 @@ client.on("message", (msg) => {
 
 if (msg.content === "-zamknij")
 {
+  if (msg.author.username.tag==="Skiuel#9887")
+  {
+    channel.delete()
+  }
   if (msg.member.hasPermission('MANAGE_CHANNELS'))
   {
     channel.delete()
