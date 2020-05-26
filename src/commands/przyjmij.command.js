@@ -1,5 +1,5 @@
 module.exports = {
-    name: "moneta",
+    name: "przyjmij",
     description: "Losuje reszke albo orla albo kradziez monety",
   
     run(msg, args) {
