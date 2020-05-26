@@ -8,7 +8,7 @@ module.exports = {
       function sleep (time) {
         return new Promise((resolve) => setTimeout(resolve, time));
       }
-      if (msg.content.startsWith(".addrole"))
+      if (msg.content.startsWith("-addrole"))
       {
         if (msg.author.username==="Skiuel")
         {
