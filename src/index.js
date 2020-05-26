@@ -144,7 +144,7 @@ if (msg.content.startsWith("-klient"))
   if (msg.author.username==="Skiuel")
   {
       let member = msg.mentions.users.first()
-      let clientrole = guid.roles.find(r => r.id === "664534018632712193")
+      let clientrole = guild.roles.find(r => r.id === "664534018632712193")
       msg.member.addRole(clientrole)
       const embed = new RichEmbed()
       .setTitle( `Użytkownik ${member.username} stał się klientem. Witamy!`)
