@@ -70,7 +70,7 @@ client.on("message", (msg) => {
         channel.send("Przyjacielu, poprawne użycie to `-zamowienie tresc`")
         return
       }
-        const role = guild.roles.find(role => role.id==="664533954535358464")
+        const ekipa = guild.roles.find(role => role.id==="714900838471958610")
         guild.createChannel(`❗|zamówienie-${msg.author.username}`, {
           type: 'text',
           permissionOverwrites: [
@@ -87,7 +87,7 @@ client.on("message", (msg) => {
               allow: ['READ_MESSAGE_HISTORY'],
             },
             {
-              id: role.id,
+              id: ekipa.id,
               allow: ['READ_MESSAGES','READ_MESSAGE_HISTORY',],
             },
             {
