@@ -25,5 +25,12 @@ if (msg.member.hasPermission("MANAGE_ROLES"))
  
 
 }
+else
+{
+    const embed = new RichEmbed()
+    .setTitle("Za cienki w uszach jesteś koleś.")
+    .setColor("RED")
+    channel.send(embed)
+}
     },
 }
