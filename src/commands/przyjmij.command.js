@@ -7,7 +7,7 @@ module.exports = {
         const { author, guild, channel,} = msg
 if (msg.content==="-przyjmij")
 {
-  if (msg.member.roles.find(r => r.name === "🛠|Kreator"))
+  if (msg.member.roles.find(r => r.id === "664533954535358464"))
   {
     if (msg.channel.name.startsWith("❗zamówienie-"))
     {
