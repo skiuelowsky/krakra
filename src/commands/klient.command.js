@@ -19,15 +19,16 @@ if (msg.content === "-klient")
       .setTitle("Nie podałeś komu chcesz dać klienta!")
      .setColor("RED")
      channel.send(embed)
-     return
+  
     }
-   
+   else
+   {
       msg.member.addRole(hejnal)
      const embed = new RichEmbed()
      .setTitle( `Użytkownik ${member} stał się klientem. Witamy!`)
      .setColor("RED")
       channel.send(embed)
-
+   }
       }
       else
         {
