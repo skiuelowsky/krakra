@@ -123,7 +123,7 @@ client.on("message", (msg) => {
     
 }
 
-if (msg.content==="-zamknij")
+if (msg.content === "-zamknij")
 {
   if (msg.member.hasPermission('MANAGE_CHANNELS'))
   {
@@ -139,7 +139,7 @@ if (msg.content==="-zamknij")
   }
 }
     
-if (msg.content==="-klient")
+if (msg.content === "-klient")
 {
 if (msg.member.hasPermission("MANAGE_ROLES"))
 {
@@ -161,9 +161,6 @@ let hejnal = msg.member.roles.find(r => r.id === "664534018632712193")
     .setTitle( `Użytkownik ${member} stał się klientem. Witamy!`)
     .setColor("RED")
     channel.send(embed)
- 
- 
- 
 
 }
 else
