@@ -11,8 +11,8 @@ if (msg.content==="-przyjmij")
   {
     if (msg.channel.name.startsWith("❗zamówienie-"))
     {
-      const name = msg.channel.name.split("❗")
-      msg.channel.setName(`💚${name}`)
+      const name = msg.channel.name.split("❗zamówienie-")
+      msg.channel.setName(`💚${name}by${msg.author.username}`)
       
       const embed = new RichEmbed()
       .setTitle("Przyjęto zamówienie! Miłej współpracy!")
