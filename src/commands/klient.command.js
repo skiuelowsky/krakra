@@ -5,8 +5,8 @@ module.exports = {
     run(msg, args) {
       const {Client, RichEmbed, GuildMember} = require("discord.js")
       const { author, guild, channel,} = msg
-if (msg.content === "-klient")
-{
+
+
   if (msg.member.hasPermission("MANAGE_ROLES"))
   {
 
@@ -37,6 +37,6 @@ if (msg.content === "-klient")
          .setColor("RED")
          channel.send(embed)
         }
-      }
+      
     },
 }
