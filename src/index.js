@@ -139,38 +139,6 @@ if (msg.content === "-zamknij")
   }
 }
     
-if (msg.content === "-klient")
-{
-if (msg.member.hasPermission("MANAGE_ROLES"))
-{
-
-let hejnal = msg.member.roles.find(r => r.id === "664534018632712193")
-
- let member = msg.mentions.users.first()
- if (!member)
- {
-    const embed = new RichEmbed()
-    .setTitle("Nie podałeś komu chcesz dać klienta!")
-    .setColor("RED")
-    channel.send(embed)
-    return
- }
-   
-    msg.member.addRole(hejnal)
-    const embed = new RichEmbed()
-    .setTitle( `Użytkownik ${member} stał się klientem. Witamy!`)
-    .setColor("RED")
-    channel.send(embed)
-
-}
-else
-{
-    const embed = new RichEmbed()
-    .setTitle("Za cienki w uszach jesteś koleś.")
-    .setColor("RED")
-    channel.send(embed)
-}
-}
 
 
         });
