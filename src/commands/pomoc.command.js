@@ -9,10 +9,9 @@ module.exports = {
         const embed = new RichEmbed()
         .setTitle("Kreatorzy serwerów")
         .setDescription("Aby złożyć zamówienie udaj się na kanał <#714484679096533043> a następnie wpisz -zamowienie pakiet \n\nAby przyjąć zamówienie wpisz -przyjmij (musisz posiadać rangę kreator!)")
-        .addFields(
-            {name:"Made by", value:"Skiuel",inline: true},
-            {name:"For", value:`You ${msg.author.username}`,inline: true},
-        )
+        .addField("Made by", "Skiuel", true)
+        .addField("For", `You ${msg.author.username}`, true)
+
         .setColor("#4287f5")
         channel.send(embed)
     },
