@@ -13,6 +13,11 @@ if (msg.content==="-przyjmij")
     {
       const name = msg.channel.name.split("❗")
       msg.channel.setName(`💚${name}`)
+      
+      const embed = new RichEmbed()
+      .setTitle("Przyjęto zamówienie! Miłej współpracy!")
+      .setColor("GREEN")
+      channel.send(embed)
     }
     else
     {
