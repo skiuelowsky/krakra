@@ -9,7 +9,7 @@ if (msg.content==="-przyjmij")
 {
   if (msg.member.roles.find(r => r.id === "664533954535358464"))
   {
-    if (msg.channel.name.startsWith("❗zamówienie-"))
+    if (msg.channel.name.startsWith("❗|zamówienie-"))
     {
       const name = msg.channel.name.split("❗")
       msg.channel.setName(`💚${name}`)
