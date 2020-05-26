@@ -36,7 +36,7 @@ function sleep(delay) {
 
 const activities_list = [
   "Bunt maszyn", 
-  "Tworzę serwer",
+  "By Skiuel",
   "By Skiuel", 
   "Dark Souls III"
   ]; // creates an arraylist containing phrases you want your bot to switch through.
