@@ -71,7 +71,7 @@ client.on("message", (msg) => {
         return
       }
         const role = guild.roles.find(role => role.id==="664533954535358464")
-        guild.createChannel(`❗zamówienie-${msg.author.username}`, {
+        guild.createChannel(`❗|zamówienie-${msg.author.username}`, {
           type: 'text',
           permissionOverwrites: [
             {
