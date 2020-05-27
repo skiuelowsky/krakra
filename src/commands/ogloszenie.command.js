@@ -12,6 +12,15 @@ module.exports = {
         msg.delete()
         let wiadom = msg.content.slice(11)
       
+        if (!wiadom)
+        {
+          const blond = new RichEmbed()
+          .setTitle("Wpisz jakie ogłoszenie chcesz wysłać!")
+          .setDescription(wiadom)
+          .setColor("0x00fff9")
+          channel.send(blond)
+        }
+
         const embed = new RichEmbed()
         .setTitle("Ogłoszenie")
         .setDescription(wiadom)
