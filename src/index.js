@@ -63,7 +63,7 @@ client.on("message", (msg) => {
     if (channel.id==="715240756587266212")
     {
 
-      const tresc = msg.content.slice(12)
+      const tresc = msg.content.slice(7)
       msg.delete()
       if(!tresc)
       {
