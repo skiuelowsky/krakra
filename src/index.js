@@ -57,21 +57,21 @@ client.on("message", (msg) => {
   if (author.bot || !guild) {
     return
   }
-  if (msg.content.startsWith("-zamowienie"))
+  if (msg.content.startsWith(".zamow"))
   {
-  var menchan = msg.guild.channels.get('714484679096533043').toString()
-    if (channel.id==="714484679096533043")
+  var menchan = msg.guild.channels.get('715240756587266212').toString()
+    if (channel.id==="715240756587266212")
     {
 
       const tresc = msg.content.slice(12)
       msg.delete()
       if(!tresc)
       {
-        channel.send("Przyjacielu, poprawne użycie to `-zamowienie tresc`")
+        channel.send("Przyjacielu, poprawne użycie to `.zamow tresc`")
         return
       }
-        const ekipa = guild.roles.find(role => role.id==="714900838471958610")
-        guild.createChannel(`❗|zamówienie-${msg.author.username}`, {
+        const ekipa = guild.roles.find(role => role.id==="715242821371559956")
+        guild.createChannel(`❗zamówienie-${msg.author.username}`, {
           type: 'text',
           permissionOverwrites: [
             {
@@ -97,7 +97,7 @@ client.on("message", (msg) => {
           ],
         })
       .then(channel => {
-      let category = guild.channels.find(c => c.name == "┃KREATORZY : ZAMÓWIENIA┃" && c.type == "category");
+      let category = guild.channels.find(c => c.name == "╔═══》ZAMÓWIENIA《════╗" && c.type == "category");
   
       if (!category) throw new Error("Category channel does not exist");
        channel.setParent(category.id).then(
@@ -123,12 +123,9 @@ client.on("message", (msg) => {
     
 }
 
-if (msg.content === "-zamknij")
+if (msg.content === ".zamknij")
 {
-  if (msg.author.username==="Skiuel")
-  {
-    channel.delete()
-  }
+
   if (msg.member.hasPermission('MANAGE_CHANNELS'))
   {
     channel.delete()
@@ -143,7 +140,7 @@ if (msg.content === "-zamknij")
   }
 }
     
-if (msg.content.startsWith("-klient"))
+if (msg.content.startsWith(".klient"))
 {
   if (msg.member.hasPermission("MANAGE_ROLES"))
   {
@@ -156,7 +153,7 @@ if (msg.content.startsWith("-klient"))
         channel.send(embed)
         return
       }
-      let clientrole = guild.roles.find(r => r.id === "664534018632712193")
+      let clientrole = guild.roles.find(r => r.id === "715134977859387441")
       msg.member.addRole(clientrole)
       const embed = new RichEmbed()
       .setTitle( `Użytkownik ${member.username} stał się klientem. Witamy!`)
