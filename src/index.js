@@ -48,6 +48,18 @@ client.on('ready', () => {
   }, 10000);
 });
 
+
+client.on(GuildMemberAdd, member=>{
+  const channel = guild.channels.find(channel => channel.id ==="715134978220097557")
+  const embed = new RichEmbed()
+  .setTitle("Witamy!")
+  .setDescription(`Witaj **${member.username}** na serwerze!`)
+  channel.send(embed)
+})
+
+
+
+
 //Weryfikacja
 client.on("message", (msg) => {
 
