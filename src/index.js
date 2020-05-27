@@ -116,7 +116,7 @@ client.on("message", (msg) => {
     }
     else{
       const embed = new RichEmbed()
-      .setDescription(`Tej komendy można używać tylko na kanale <#714484679096533043> !`)
+      .setDescription(`Tej komendy można używać tylko na kanale <#715240756587266212> !`)
       .setColor("RED")
       channel.send(embed)
     }
