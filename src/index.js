@@ -57,7 +57,71 @@ client.on("message", (msg) => {
   if (author.bot || !guild) {
     return
   }
+  if (msg.content.startsWith(".zamow"))
+  {
+  var menchan = msg.guild.channels.get('715240756587266212').toString()
+    if (channel.id==="715240756587266212")
+    {
+
+      const tresc = msg.content.slice(7)
+      msg.delete()
+      if(!tresc)
+      {
+        channel.send("Przyjacielu, poprawne użycie to `.zamow tresc`")
+        return
+      }
+        const ekipa = guild.roles.find(role => role.id==="715242821371559956")
+        guild.createChannel(`❗zamówienie-${msg.author.username}`, {
+          type: 'text',
+          permissionOverwrites: [
+            {
+              id: msg.guild.id,
+              deny: ['VIEW_CHANNEL'],
+            },
+            {
+              id: msg.author.id,
+              allow: ['VIEW_CHANNEL'],
+            },
+            {
+              id: msg.author.id,
+              allow: ['READ_MESSAGE_HISTORY'],
+            },
+            {
+              id: ekipa.id,
+              allow: ['READ_MESSAGES','READ_MESSAGE_HISTORY',],
+            },
+            {
+              id: msg.author.id,
+              allow: ['READ_MESSAGES','READ_MESSAGE_HISTORY',],
+            },
+          ],
+        })
+      .then(channel => {
+      let category = guild.channels.find(c => c.name == "╔═══》ZAMÓWIENIA《════╗" && c.type == "category");
   
+      if (!category) throw new Error("Category channel does not exist");
+       channel.setParent(category.id).then(
+       channel.send(embed)
+      
+    )
+
+  }).catch(console.error);
+      
+      const embed = new RichEmbed()
+      .setTitle(`Zamówienie ${msg.author.username}`)
+      .setDescription(tresc)
+      .setColor("#03fcd3")
+      
+      
+    }
+    else{
+      const embed = new RichEmbed()
+      .setDescription(`Tej komendy można używać tylko na kanale <#715240756587266212> !`)
+      .setColor("RED")
+      channel.send(embed)
+    }
+    
+}
 
 if (msg.content === ".zamknij")
 {
