@@ -5,7 +5,7 @@ module.exports = {
     run(msg, args) {
       const {Client, RichEmbed, GuildMember} = require("discord.js")
       const { author, guild, channel,} = msg
-      if (msg.content === "zweryfikuj")
+      if (msg.content === ".zweryfikuj")
       {
         if (msg.channel.id === "715134978068971556")
         {
