@@ -59,18 +59,7 @@ client.on('GuildMemberAdd', member=>{
 
 
 
-client.on("message", async message =>
-{
-    
-  
-    const guild = message.guild;
 
-    const categoryChannels = guild.channels.filter(channel => channel.type === "╔═══》ZAMÓWIENIA《════╗");
-
-    categoryChannels.forEach(channel => {
-        console.log(`Category ${channel.name} has ${channel.children.size} channels`);
-  
-});
 
 //Weryfikacja
 client.on("message", (msg) => {
