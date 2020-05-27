@@ -5,14 +5,14 @@ module.exports = {
     run(msg, args) {
         const {Client, RichEmbed, GuildMember} = require("discord.js")
         const { author, guild, channel,} = msg
-if (msg.content==="-przyjmij")
+if (msg.content===".przyjmij")
 {
-  if (msg.member.roles.find(r => r.id === "664533954535358464"))
+  if (msg.member.roles.find(r => r.id === "715242821371559956"))
   {
     if (msg.channel.name.startsWith("❗zamówienie-"))
     {
       const name = msg.channel.name.split("❗zamówienie-")
-      msg.channel.setName(`💚${name}_by_${msg.author.username}`)
+      msg.channel.setName(`💚${name}-przyjęte`)
       
       const embed = new RichEmbed()
       .setTitle("Przyjęto zamówienie! Miłej współpracy!")
