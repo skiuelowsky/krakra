@@ -6,7 +6,7 @@ module.exports = {
     const {Client, RichEmbed, GuildMember} = require("discord.js")
     const { author, guild, channel,} = msg
 
-    if (msg.member.roles.find(r => r.id === "715134978068971553")
+    if (msg.member.roles.find(r => r.id === "715134978068971553"))
     {
       let sprawdzanie = msg.content.slice(11)
       if(!sprawdzanie)
