@@ -169,17 +169,7 @@ if (msg.content.startsWith(".klient"))
    }
  }
 
-if (msg.channel.id === "715134978068971556")
-{
-  if (!msg.content === ".zweryfikuj")
-  {
-    msg.delete()
-    const embed = new RichEmbed()
-    .setTitle( `Wpisałeś coś innego niż **.zweryfikuj** spróbuj jeszcze raz.`)
-    .setColor("RED")
-    msg.author.send(embed)
-  }
-}
+
 
 
         });
