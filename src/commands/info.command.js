@@ -9,9 +9,9 @@ module.exports = {
 
     const botAuthor = "Skiuel"
     const botVersion = "v1.0"
-    const botName = "Kreatorzy serwerów"
+    const botName = "Dream Discord"
     const botDescription =
-      "Autorski bot, serwera Kreatorzy Serwerów."
+      "Autorski bot serwera Dream Discord."
 
     const embed = new RichEmbed()
       // Set the title of the field
