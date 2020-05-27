@@ -9,8 +9,13 @@ module.exports = {
       {
         if (msg.channel.id === "715134978068971556")
         {
+            msg.delete()
             const verifyrole = msg.guild.roles.find(r => r.id === "715134977859387438")
             msg.member.addRole(verifyrole)
+            const verify = new RichEmbed()
+            .setTitle("Zostałeś poprawnie zweryfikowany!")
+            .setColor("GREEN")
+            msg.author.send(verify)
         }
         else
         {
