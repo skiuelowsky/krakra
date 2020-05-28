@@ -92,11 +92,9 @@ client.on("message", (msg) => {
     {
 
       const buychannel = guild.channels.find(channel => channel.id==="715240902393593886")
-      let numer_teraz = buychannel.name
+      const numer_teraz = buychannel.name.split("》┋📑┆Zamówień:")
       log(`numer_teraz : ${numer_teraz}`)
-      let int_numer_teraz = parseInt(numer_teraz)
-      log(`int_numer_teraz : ${int_numer_teraz}`)
-      let wynik = int_numer_teraz + 1
+      const wynik = numer_teraz + 1
       log(`wynik : ${wynik}`)
       buychannel.setName("》┋📑┆Zamówień:"+ wynik)
 
