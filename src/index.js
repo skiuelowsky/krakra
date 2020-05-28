@@ -220,7 +220,16 @@ if (msg.content.startsWith(".klient"))
     {
 
      
- 
+      let buychannel = guild.channels.find(channel => channel.id === "715240902393593886")
+
+      let number_buy = buychannel.name.split("》┋📑┆Zamówień:")
+      
+      number_buy = parseInt(buychannel,10)
+
+      number_buy = number_buy + 1
+
+      buychannel.setName(`》┋📑┆Zamówień:${number_buy}`)
+
       const name = msg.channel.name.split("❗zamówienie-")
       msg.channel.setName(`💚${name}-przyjęte`)
       
