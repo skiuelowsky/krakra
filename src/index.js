@@ -214,12 +214,16 @@ if (msg.content.startsWith(".klient"))
 
      
       let buychannel = guild.channels.find(channel => channel.id === "715240902393593886")
+      log(buychannel)
 
       let number_buy = buychannel.name.split("》┋📑┆Zamówień:")
-      
+      log(number_buy)
+
       number_buy = parseInt(buychannel,10)
+      log(number_buy)
 
       number_buy = number_buy + 1
+      log(number_buy)
 
       buychannel.setName(`》┋📑┆Zamówień:${number_buy}`)
 
