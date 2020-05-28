@@ -92,11 +92,11 @@ client.on("message", (msg) => {
     {
       
       const buychannel = guild.channels.find(channel => channel.id==="715240902393593886")
-      const nazwabuya = buychannel.name
       const numer_teraz = buychannel.name.slice("》┋📑┆Zamówień:")
       const int_numer_teraz = parseInt(numer_teraz, 10)
       const wynik = int_numer_teraz + 1
       buychannel.setName("》┋📑┆Zamówień:"+ wynik)
+
       const tresc = msg.content.slice(7)
       msg.delete()
       if(!tresc)
@@ -213,8 +213,11 @@ if (msg.content.startsWith(".klient"))
 {
   if (msg.member.roles.find(r => r.id === "715242821371559956"))
   {
-   
+    if (msg.channel.name.startsWith("❗zamówienie-"))
+    {
 
+     
+ 
       const name = msg.channel.name.split("❗zamówienie-")
       msg.channel.setName(`💚${name}-przyjęte`)
       
