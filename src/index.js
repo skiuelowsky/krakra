@@ -27,6 +27,9 @@ client.on("ready", () => {
 
 
 
+
+
+
 function sleep(delay) {
   var start = new Date().getTime();
   while (new Date().getTime() < start + delay);
@@ -206,6 +209,34 @@ if (msg.content.startsWith(".klient"))
   {
     if (msg.channel.name.startsWith("❗zamówienie-"))
     {
+
+      const ile =  fs.readFileSync("src/zamowienia.js",{encoding:"utf8"})
+
+      const wynik = ile + 1
+
+      fs.writeFile("src/zamowienia.js",wynik, (err) => {
+        if (err)
+        {
+          log(err)
+        }else
+        {
+          log("finish")
+          
+        }
+      });
+      const buychannel = guild.channels.find(channel => channel.id==="715240902393593886")
+      buychannel.setName("》┋📑┆Zamówień:"+wynik)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
