@@ -207,20 +207,8 @@ if (msg.content.startsWith(".klient"))
     if (msg.channel.name.startsWith("❗zamówienie-"))
     {
 
-     let ile =  fs.readFileSync("src/zamowienia.js",{encoding:"utf8"})
 
-      fs.writeFile("src/zamowienia.js",ile+1, (err) => {
-        if (err)
-        {
-          log(err)
-        }else
-        {
-          log("finish")
-          
-        }
-      });
-      const buychannel = guild.channels.find(channel => channel.id==="715240902393593886")
-      buychannel.setName("》┋📑┆Zamówień:"+ile+1)
+
       const name = msg.channel.name.split("❗zamówienie-")
       msg.channel.setName(`💚${name}-przyjęte`)
       
