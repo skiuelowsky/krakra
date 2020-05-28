@@ -90,7 +90,13 @@ client.on("message", (msg) => {
   var menchan = msg.guild.channels.get('715240756587266212').toString()
     if (channel.id==="715240756587266212")
     {
-
+      
+      const buychannel = guild.channels.find(channel => channel.id==="715240902393593886")
+      const nazwabuya = buychannel.name
+      const numer_teraz = buychannel.name.slice("》┋📑┆Zamówień:")
+      const int_numer_teraz = parseInt(numer_teraz, 10)
+      const wynik = int_numer_teraz + 1
+      buychannel.setName("》┋📑┆Zamówień:"+ wynik)
       const tresc = msg.content.slice(7)
       msg.delete()
       if(!tresc)
@@ -207,38 +213,7 @@ if (msg.content.startsWith(".klient"))
 {
   if (msg.member.roles.find(r => r.id === "715242821371559956"))
   {
-    if (msg.channel.name.startsWith("❗zamówienie-"))
-    {
-
-      const ile =  fs.readFileSync("src/zamowienia.js",{encoding:"utf8"})
-
-      const wynik = ile + 1
-
-      fs.writeFile("src/zamowienia.js",wynik, (err) => {
-        if (err)
-        {
-          log(err)
-        }else
-        {
-          log("finish")
-          
-        }
-      });
-      const buychannel = guild.channels.find(channel => channel.id==="715240902393593886")
-      buychannel.setName("》┋📑┆Zamówień:"+wynik)
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
       const name = msg.channel.name.split("❗zamówienie-")
       msg.channel.setName(`💚${name}-przyjęte`)
