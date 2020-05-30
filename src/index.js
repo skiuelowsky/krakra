@@ -241,6 +241,10 @@ if (msg.content.startsWith(".klient"))
     if (msg.channel.name.startsWith("❗zamówienie-"))
     {
 
+      let przyjete = fs.readFileSync("przyjete.js", {encoding:"utf-8"})
+      przyjete = parseInt(przyjete)
+      przyjete = przyjete + 1
+      fs.writeFileSync("przyjete.js",przyjete)
 
       const name = msg.channel.name.split("❗zamówienie-")
       msg.channel.setName(`💚${name}-przyjęte`)
