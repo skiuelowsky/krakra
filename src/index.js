@@ -220,7 +220,8 @@ if (msg.content.startsWith(".klient"))
 
       number_buy = number_buy[1]
       log(number_buy)
-
+      number_buy = parseInt(number_buy)
+      log(number_buy)
       number_buy = number_buy + 1
       log(number_buy)
 
