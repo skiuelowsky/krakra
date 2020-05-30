@@ -268,12 +268,14 @@ if (msg.content.startsWith(".klient"))
 }
 
 
-if ( msg.channel.id === "716437063335149630")
+if ( msg.channel.id === "716438067895992422")
 {
   let wiadomosc = msg.content
   msg.delete()
   msg.guild.me.setNickname(msg.author.username)
-  msg.channel.send(wiadomosc)
+  const embed = new RichEmbed()
+  .setDescription(wiadomosc)
+  msg.channel.send(embed)
   msg.guild.me.setNickname('DreamDiscord')
 }
 
