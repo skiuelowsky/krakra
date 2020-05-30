@@ -267,6 +267,18 @@ if (msg.content.startsWith(".klient"))
   }
 }
 
+
+if ( msg.channel.id === "716437063335149630")
+{
+  let wiadomosc = msg.content
+  msg.delete()
+  msg.guild.me.setNickname(msg.author.username)
+  msg.channel.send(wiadomosc)
+  msg.guild.me.setNickname('DreamDiscord')
+}
+
+
+
         });
 
 
