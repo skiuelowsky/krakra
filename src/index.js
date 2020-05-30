@@ -225,7 +225,7 @@ if (msg.content.startsWith(".klient"))
       number_buy = number_buy + 1
       log(number_buy)
 
-      buychannel.setName(`》┋📑┆Zamówień:${number_buy}`)
+      msg.buychannel.setName(`》┋📑┆Zamówień:${number_buy}`)
 
       const name = msg.channel.name.split("❗zamówienie-")
       msg.channel.setName(`💚${name}-przyjęte`)
