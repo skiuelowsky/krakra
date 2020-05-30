@@ -218,7 +218,7 @@ if (msg.content.startsWith(".klient"))
       let number_buy = buychannel.name.split("》┋📑┆Zamówień:")
       log(number_buy)
 
-      number_buy = parseInt(buychannel,10)
+      number_buy = number_buy[1]
       log(number_buy)
 
       number_buy = number_buy + 1
