@@ -275,6 +275,7 @@ if ( msg.channel.id === "716438067895992422")
   msg.guild.me.setNickname(msg.author.username)
   const embed = new RichEmbed()
   .setDescription(wiadomosc)
+  .setColor("#37eb34")
   msg.channel.send(embed)
   msg.guild.me.setNickname('DreamDiscord')
 }
