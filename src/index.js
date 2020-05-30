@@ -106,7 +106,7 @@ client.on("message", (msg) => {
       log(number_buy)
 
       buychannel.setName(`》┋📑┆Zamówień:${number_buy}`)
-
+ 
       const tresc = msg.content.slice(7)
       msg.delete()
       if(!tresc)
