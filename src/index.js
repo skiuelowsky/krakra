@@ -105,7 +105,7 @@ client.on("message", (msg) => {
       number_buy = number_buy + 1
       log(number_buy)
 
-      buychannel.setName(`》┋📑┆Zamówień:${number_buy}`).then(log("powinno zmienic"))
+      buychannel.setName("》┋📑┆Zamówień:"+number_buy).then(log("powinno zmienic"))
  
       const tresc = msg.content.slice(7)
       msg.delete()
