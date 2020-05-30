@@ -91,7 +91,21 @@ client.on("message", (msg) => {
     if (channel.id==="715240756587266212")
     {
 
+      
+     
+      let buychannel = guild.channels.find(channel => channel.id === "715240902393593886")
 
+      let number_buy = buychannel.name.split("》┋📑┆Zamówień:")
+      log(number_buy)
+
+      number_buy = number_buy[1]
+      log(number_buy)
+      number_buy = parseInt(number_buy)
+      log(number_buy)
+      number_buy = number_buy + 1
+      log(number_buy)
+
+      buychannel.setName(`》┋📑┆Zamówień:${number_buy}`)
 
       const tresc = msg.content.slice(7)
       msg.delete()
@@ -159,6 +173,21 @@ if (msg.content === ".zamknij")
   if (msg.member.hasPermission('MANAGE_CHANNELS'))
   {
     channel.delete()
+    
+     
+    let buychannel = guild.channels.find(channel => channel.id === "715240902393593886")
+
+    let number_buy = buychannel.name.split("》┋📑┆Zamówień:")
+    log(number_buy)
+
+    number_buy = number_buy[1]
+    log(number_buy)
+    number_buy = parseInt(number_buy)
+    log(number_buy)
+    number_buy = number_buy - 1
+    log(number_buy)
+
+    buychannel.setName(`》┋📑┆Zamówień:${number_buy}`)
 
   }
   else
@@ -212,20 +241,6 @@ if (msg.content.startsWith(".klient"))
     if (msg.channel.name.startsWith("❗zamówienie-"))
     {
 
-     
-      let buychannel = guild.channels.find(channel => channel.id === "715240902393593886")
-
-      let number_buy = buychannel.name.split("》┋📑┆Zamówień:")
-      log(number_buy)
-
-      number_buy = number_buy[1]
-      log(number_buy)
-      number_buy = parseInt(number_buy)
-      log(number_buy)
-      number_buy = number_buy + 1
-      log(number_buy)
-
-      buychannel.setName(`》┋📑┆Zamówień:${number_buy}`)
 
       const name = msg.channel.name.split("❗zamówienie-")
       msg.channel.setName(`💚${name}-przyjęte`)
