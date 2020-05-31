@@ -283,8 +283,7 @@ if ( msg.channel.id === "716438067895992422")
     const embed = new RichEmbed()
     .setDescription(msg.content)
     .setColor("#37eb34")
-    let wiadom = msg.channel.send(embed)
-    wiadom.react("💚")
+    msg.channel.send(embed)
     msg.guild.me.setNickname('DreamDiscord')
     
   }
