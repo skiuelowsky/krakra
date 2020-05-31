@@ -284,10 +284,7 @@ if ( msg.channel.id === "716438067895992422")
     .setDescription(msg.content)
     .setColor("#37eb34")
     msg.channel.send(embed).then(
-      msg.guild.me.setNickname('DreamDiscord'),
-      msg.react("✔"),
-      msg.react("❌")
-      )
+      msg.guild.me.setNickname('DreamDiscord'))
     
   }
 }
