@@ -6,7 +6,7 @@ module.exports = {
       const {Client, RichEmbed, GuildMember} = require("discord.js")
       const { author, guild, channel,} = msg
     
-      channel.send("``╔═════════════》Dream Discord《═════════════╗"+
+      channel.send("``╔═════════════》Dream Discord《═════════════╗\n"+
       "**AUTORSKI BOT NAPISANY POD TWÓJ SERWER ZA DARMO.**\n"+
     
       "Na serwerze DreamDiscord jest promocja. \n"+
