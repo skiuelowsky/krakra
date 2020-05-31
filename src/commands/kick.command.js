@@ -6,74 +6,55 @@ module.exports = {
       const {Client, RichEmbed, GuildMember} = require("discord.js")
       const { author, guild, channel,} = msg
       if (msg.content.startsWith('.kick')) {
-        if (msg.member.hasPermission("KICK_MEMBERS")) {
-        const user = msg.mentions.users.first();
-    
-        if (user) {
-    
-          const member = msg.guild.member(user);
-    
-          if (member) {
-    
-    
-            member
-              .kick('No frajerem był to go wyjebałem')
-              .then(() => {
-                
-                const embed = new RichEmbed()
-    
-                .setTitle(`${user.tag} został wyrzucony!`)
-    
-                .setColor(0xfb0b0b)
-                
-                channel.send(embed);
-    
-              })
-              .catch(err => {
-    
-                const embed = new RichEmbed()
-    
-                .setTitle(`Nie mogę go wyrzucić!`)
-    
-                .setColor(0xfb0b0b)
-                
-                channel.send(embed);
-              });
-          } else {
-    
-                const embed = new RichEmbed()
-    
-                .setTitle(`Tego użytkownika nie ma na tym chacie!`)
-    
-                .setColor(0xfb0b0b)
-                
-                channel.send(embed);
+       if (msg.member.hasPermission("KICK_MEMBERS"))
+       {
+          let member = msg.mentions.users.first()
+          let powod = msg.content.slice(6)
+          if (!powod)
+          {
+            const embed = new RichEmbed()
+            .setTitle("Poprawne użycie to: .kick powód użytkownik")
+            .setColor("RED")
+            msg.channel.send(embed)
+            return
           }
-    
-        } else {
+          if (!member)
+          {
+            const embed = new RichEmbed()
+            .setTitle("Poprawne użycie to: .kick powód użytkownik")
+            .setColor("RED")
+            msg.channel.send(embed)
+            return
+          }
           
-                const embed = new RichEmbed()
-    
-                .setTitle(`To sie robi tak: .kick @nazwa`)
-    
-                .setColor(0xfb0b0b)
-                
-                channel.send(embed);
-                 
-        }
         
-        }
-        else
-        {
-          const embed = new RichEmbed()
-    
-          .setTitle(`Za cienki w uszach jesteś`)
-    
-    
-          .setColor(0xfb0b0b)
+            member.kick(powod)
+            const embed = new RichEmbed()
+            .setTitle("Użytkownik został wyrzucony!")
+            .setColor("RED")
+            msg.channel.send(embed)
+
+            const channel = guild.channels.find(channel => channel.id === "715134978068971559")
+
+
+
+            const logi = new RichEmbed()
+            .setTitle("Użytkownik został wyrzucony!")
+            .addField("Użytkownik:",msg.author)
+            .addField("Kanał:",msg.channel)
+            .addField("Powód:",powod)
+            .setColor("#ff0f1b")
+            channel.send(logi)
           
-          channel.send(embed);
-        }
+          
+       }
+       else
+       {
+         const embed = new RichEmbed()
+         .setTitle("Za cienki w uszach jesteś koleś.")
+         .setColor("RED")
+         msg.channel.send(embed)
+       }
       }
     },
 }
