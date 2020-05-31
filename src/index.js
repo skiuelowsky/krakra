@@ -334,19 +334,14 @@ if (msg.channel.id === "715134978068971556")
   }
   else
   {
+    msg.delete()
       const embed = new RichEmbed()
       .setTitle("Napisałeś coś innego niż **.zweryfikuj** spróbuj jeszcze raz.")
       .setColor("RED")
       msg.author.send(embed)
   }
 }
-else
-{
-  const embed = new RichEmbed()
-  .setTitle("Jesteś już zweryfikowany!")
-  .setColor("RED")
-  channel.send(embed)
-}
+
 
 
         });
