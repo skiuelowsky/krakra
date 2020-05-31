@@ -7,15 +7,15 @@ module.exports = {
       const { author, guild, channel,} = msg
     
       channel.send("``╔═════════════》Dream Discord《═════════════╗"+
-      "**AUTORSKI BOT NAPISANY POD TWÓJ SERWER ZA DARMO.**"+
+      "**AUTORSKI BOT NAPISANY POD TWÓJ SERWER ZA DARMO.**\n"+
     
-      "Na serwerze DreamDiscord jest promocja. "+
-      "Wystarczy, że zaprosisz na serwer 2 osoby a będziesz mógł "+
-      "otrzymać autorskiego"+
-      "bota za darmo! Jak się zakwalifikować do promocji? Wszystkie s"+
-      "szczegóły można zobaczyć na serwerze"+
-      "Nasza strona: http://katosh.pl/"+
-      "Invitelink:  https://discord.gg/hsEHcZY"+
+      "Na serwerze DreamDiscord jest promocja. \n"+
+      "Wystarczy, że zaprosisz na serwer 2 osoby a będziesz mógł \n"+
+      "otrzymać autorskiego\n"+
+      "bota za darmo! Jak się zakwalifikować do promocji? Wszystkie s\n"+
+      "szczegóły można zobaczyć na serwerze\n"+
+      "Nasza strona: http://katosh.pl/\n"+
+      "Invitelink:  https://discord.gg/hsEHcZY\n"+
       "╚═════════════》Dream Discord《═════════════╝``")
 
 
