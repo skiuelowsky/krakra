@@ -7,7 +7,7 @@ module.exports = {
       const { author, guild, channel,} = msg
     
       channel.send("``╔═════════════》Dream Discord《═════════════╗\n"+
-      "**AUTORSKI BOT NAPISANY POD TWÓJ SERWER ZA DARMO.**\n"+
+      "**AUTORSKI BOT NAPISANY POD TWÓJ SERWER ZA DARMO.**\n\n"+
     
       "Na serwerze DreamDiscord jest promocja. \n"+
       "Wystarczy, że zaprosisz na serwer 2 osoby a będziesz mógł \n"+
