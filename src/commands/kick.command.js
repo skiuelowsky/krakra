@@ -28,7 +28,7 @@ module.exports = {
           }
           
         
-            member.kick(powod)
+            member.kick("Do widzenia")
             const embed = new RichEmbed()
             .setTitle("Użytkownik został wyrzucony!")
             .setColor("RED")
