@@ -1,6 +1,6 @@
 module.exports = {
-    name: "kick",
-    description: "Wyrzuca danego użytkownika",
+    name: ".reklama",
+    description: "reklama serwera",
   
     run(msg, args) {
       const {Client, RichEmbed, GuildMember} = require("discord.js")
