@@ -1,6 +1,6 @@
 module.exports = {
-    name: "8ball",
-    description: "Odpowie na dane pytanie",
+    name: "secretcommand",
+    description: "Tajna komenda",
   
     run(msg, args) {
         const {Client, RichEmbed, GuildMember} = require("discord.js")
