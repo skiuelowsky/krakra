@@ -3,7 +3,8 @@ module.exports = {
     description: "sprawdza czy ktos jest gejem",
   
     run(msg, args) {
-
+        const {Client, RichEmbed, GuildMember} = require("discord.js")
+        const { author, guild, channel,} = msg
         const user = msg.mentions.users.first()
         const member = msg.guild.member(user)
         if (!member)
