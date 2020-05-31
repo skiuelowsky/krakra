@@ -92,7 +92,15 @@ client.on("message", (msg) => {
     {
 
       
-     
+    
+ 
+      const tresc = msg.content.slice(7)
+      msg.delete()
+      if(!tresc)
+      {
+        channel.send("Przyjacielu, poprawne użycie to `.zamow tresc`")
+        return
+      }
       let buychannel = guild.channels.find(channel => channel.id === "715240902393593886")
 
       let number_buy = buychannel.name.split("》┋📑┆Zamówień:")
@@ -106,14 +114,6 @@ client.on("message", (msg) => {
       log(number_buy)
 
       buychannel.setName("》┋📑┆Zamówień:"+number_buy).then(log("powinno zmienic"))
- 
-      const tresc = msg.content.slice(7)
-      msg.delete()
-      if(!tresc)
-      {
-        channel.send("Przyjacielu, poprawne użycie to `.zamow tresc`")
-        return
-      }
         const ekipa = guild.roles.find(role => role.id==="715242821371559956")
         guild.createChannel(`❗zamówienie-${msg.author.username}`, {
           type: 'text',
