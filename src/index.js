@@ -307,14 +307,12 @@ if (msg.content.startsWith("https://discord.gg/"))
   msg.channel.send(embed)
   const channel = guild.channels.find(channel => channel.id === "715134978068971559")
 
-  var data = new Date()
-  var godzina = data.getTime()
+
 
   const logi = new RichEmbed()
   .setTitle("Niechciane zaproszenie.")
   .addField("Użytkownik:",msg.author)
   .addField("Kanał:",msg.channel)
-  .addField("Data:",godzina)
   .setColor("#ff0f1b")
   channel.send(logi)
 
