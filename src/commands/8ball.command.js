@@ -3,7 +3,8 @@ module.exports = {
     description: "Odpowie na dane pytanie",
   
     run(msg, args) {
-
+        const {Client, RichEmbed, GuildMember} = require("discord.js")
+        const { author, guild, channel,} = msg
         let ball = 0;
         ball = (Math.round (Math.random () * 1))
         const check = msg.content.slice(6)
