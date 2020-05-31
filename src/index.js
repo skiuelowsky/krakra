@@ -291,6 +291,23 @@ if ( msg.channel.id === "716438067895992422")
 
 
 
+if (msg.content.startsWith("https://discord.gg/"))
+{
+  if (msg.channel.name.startsWith("❗zamówienie-"))
+  {
+    return
+  }
+  else
+  {
+  msg.delete()
+  const embed = new RichEmbed()
+  .setTitle("Nie wolno tutaj wysyłać zaproszeń!")
+  .setColor("RED")
+  channel.send(embed)
+
+  }
+}
+
         });
 
 
