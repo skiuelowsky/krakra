@@ -10,7 +10,7 @@ module.exports = {
        {
           const user = msg.mentions.users.first()
           const member = msg.guild.member(user)
-          let powod = msg.content.slice(6,member)
+          let powod = msg.content.slice(6,"<")
           if (!powod)
           {
             const embed = new RichEmbed()
