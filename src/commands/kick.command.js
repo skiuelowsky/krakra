@@ -11,6 +11,7 @@ module.exports = {
           const user = msg.mentions.users.first()
           const member = msg.guild.member(user)
           let powod = msg.content.split(".kick ", member)
+          powod = powod - member
           if (!powod)
           {
             const embed = new RichEmbed()
