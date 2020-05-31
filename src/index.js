@@ -300,13 +300,16 @@ if (msg.content.startsWith("https://discord.gg/"))
   else
   {
   msg.delete()
+
   const embed = new RichEmbed()
   .setDescription(msg.author+" Nie wolno tutaj wysyłać zaproszeń!")
   .setColor("RED")
   msg.channel.send(embed)
   const channel = guild.channels.find(channel => channel.id === "715134978068971559")
+
   var data = new Date()
-  var godzina = date.getTime()
+  var godzina = data.getTime()
+
   const logi = new RichEmbed()
   .setTitle("Niechciane zaproszenie.")
   .addField("Użytkownik:",msg.author)
