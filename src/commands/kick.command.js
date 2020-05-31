@@ -8,7 +8,8 @@ module.exports = {
       if (msg.content.startsWith('.kick')) {
        if (msg.member.hasPermission("KICK_MEMBERS"))
        {
-          const member = msg.mentions.users.first()
+          const user = msg.mentions.users.first()
+          const member = msg.guild.member(user)
           let powod = msg.content.slice(6)
           if (!powod)
           {
