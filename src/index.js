@@ -273,8 +273,9 @@ if ( msg.channel.id === "716438067895992422")
   let wiadomosc = msg.content
   if (!wiadomosc)
   {
+    msg.author.send("Na tym kanale nie można wysyłać zdjęć. Możesz spróbować podobnie za 15 minut.").catch(err => {
     
-    msg.author.send("Na tym kanale nie można wysyłać zdjęć. Możesz spróbować podobnie za 15 minut.")
+    });
     msg.delete()
   }
   else
