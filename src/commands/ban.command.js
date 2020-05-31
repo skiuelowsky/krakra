@@ -40,7 +40,8 @@ module.exports = {
 
           const logi = new RichEmbed()
           .setTitle("Użytkownik został zbanowany!")
-          .addField("Użytkownik:",msg.author)
+          .addField("Użytkownik:",member)
+          .addField("Przez:",msg.author)
           .addField("Kanał:",msg.channel)
           .setColor("#ff0f1b")
           channel.send(logi)
