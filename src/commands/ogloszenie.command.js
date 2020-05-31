@@ -25,7 +25,7 @@ module.exports = {
         .setTitle("Ogłoszenie")
         .setDescription(wiadom)
         .setColor("0x00fff9")
-        const channel = client.channels.find(channel => channel.id ==="715134978220097563")
+        const channel = guild.channels.find(channel => channel.id ==="715134978220097563")
         channel.send(embed)
         }
         else
