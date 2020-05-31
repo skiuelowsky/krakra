@@ -289,7 +289,17 @@ if ( msg.channel.id === "716438067895992422")
   }
 }
 
+if ( msg.channel.id === "716438067895992422")
+{
+  if (!msg.content === ".zweryfikuj")
+  {
+  msg.author.send("Napisałeś coś innego niż **.zweryfikuj** spróbuj jeszcze raz.")
+    msg.delete()
+  
 
+  }
+
+}
 
         });
 
