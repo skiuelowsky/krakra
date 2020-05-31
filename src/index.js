@@ -303,7 +303,11 @@ if (msg.content.startsWith("https://discord.gg/"))
   const embed = new RichEmbed()
   .setDescription(msg.author+" Nie wolno tutaj wysyłać zaproszeń!")
   .setColor("RED")
-  channel.send(embed)
+  msg.channel.send(embed)
+  const channel = guild.channels.find(channel => channel.id === "715134978068971559")
+  const logi = new RichEmbed()
+  .setTitle("Niechciane zaproszenie.")
+  .setDescription(`Użytkownik ${msg.author} \nKanał: ${channel.name}`)
 
   }
 }
