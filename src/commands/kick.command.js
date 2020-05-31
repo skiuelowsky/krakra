@@ -10,14 +10,6 @@ module.exports = {
        {
           const user = msg.mentions.users.first()
           const member = msg.guild.member(user)
-          if (!powod)
-          {
-            const embed = new RichEmbed()
-            .setTitle("Poprawne użycie to: .kick powód użytkownik")
-            .setColor("RED")
-            msg.channel.send(embed)
-            return
-          }
           if (!member)
           {
             const embed = new RichEmbed()
