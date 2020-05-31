@@ -275,15 +275,17 @@ if ( msg.channel.id === "716438067895992422")
   {
     msg.delete()
     msg.author.send("Na tym kanale nie można wysyłać zdjęć. Możesz spróbować podobnie za 15 minut.")
-    return
   }
-  msg.delete()
-  msg.guild.me.setNickname(msg.author.username)
-  const embed = new RichEmbed()
-  .setDescription(wiadomosc)
-  .setColor("#37eb34")
-  msg.channel.send(embed)
-  msg.guild.me.setNickname('DreamDiscord')
+  else
+  {
+    msg.delete()
+    msg.guild.me.setNickname(msg.author.username)
+    const embed = new RichEmbed()
+    .setDescription(wiadomosc)
+    .setColor("#37eb34")
+    msg.channel.send(embed)
+    msg.guild.me.setNickname('DreamDiscord')
+  }
 }
 
 
