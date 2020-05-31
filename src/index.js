@@ -308,7 +308,8 @@ if (msg.content.startsWith("https://discord.gg/"))
   const logi = new RichEmbed()
   .setTitle("Niechciane zaproszenie.")
   .setDescription(`Użytkownik ${msg.author} \nKanał: ${channel.name}`)
-  channel.send(embed)
+  .setColor("#ff0f1b")
+  channel.send(logi)
 
   }
 }
