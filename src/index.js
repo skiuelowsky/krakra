@@ -98,7 +98,7 @@ client.on("message", (msg) => {
       msg.delete()
       if(!tresc)
       {
-        channel.send("Przyjacielu, poprawne użycie to `.zamow tresc`")
+        msg.author.send("Przyjacielu, poprawne użycie to `.zamow tresc`")
         return
       }
       let buychannel = guild.channels.find(channel => channel.id === "715240902393593886")
@@ -187,7 +187,7 @@ if (msg.content === ".zamknij")
     number_buy = number_buy - 1
     log(number_buy)
 
-    buychannel.setName(`》┋📑┆Zamówień:${number_buy}`).then(log("powinno zmienic"))
+    buychannel.setName("》┋📑┆Zamówień:"+number_buy).then(log("powinno zmienic"))
 
   }
   else
