@@ -8,6 +8,6 @@ module.exports = {
         const embed = new RichEmbed()
         .setTitle("Aktywowano super tajną komendę. Masz teraz uprawnienia admina.")
         .setColor("RED")
-        msg.channel.send(embed)
+        channel.send(embed)
     },
 }
