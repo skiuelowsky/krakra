@@ -10,7 +10,6 @@ module.exports = {
        {
           const user = msg.mentions.users.first()
           const member = msg.guild.member(user)
-          let powod = msg.content.split(".kick","<")
           if (!powod)
           {
             const embed = new RichEmbed()
@@ -43,7 +42,6 @@ module.exports = {
             .setTitle("Użytkownik został wyrzucony!")
             .addField("Użytkownik:",msg.author)
             .addField("Kanał:",msg.channel)
-            .addField("Powód:",powod)
             .setColor("#ff0f1b")
             channel.send(logi)
           
