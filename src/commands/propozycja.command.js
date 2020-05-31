@@ -17,9 +17,10 @@ module.exports = {
 
         const embed = new RichEmbed()
         .setDescription(wiadom)
+        .setColor("RANDOM")
         const channel = guild.channels.find(channel => channel.id === "716438067895992422")
 
-        let sendik = await msg.channel.send(embed)
+        let sendik = await channel.send(embed)
         await sendik.react("✔")
         await sendik.react("❌")
 
