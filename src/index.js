@@ -301,7 +301,7 @@ if (msg.content.startsWith("https://discord.gg/"))
   {
   msg.delete()
   const embed = new RichEmbed()
-  .setTitle(msg.author.username.tag+"Nie wolno tutaj wysyłać zaproszeń!")
+  .setTitle(msg.author+" Nie wolno tutaj wysyłać zaproszeń!")
   .setColor("RED")
   channel.send(embed)
 
