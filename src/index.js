@@ -273,7 +273,7 @@ if ( msg.channel.id === "716438067895992422")
   let wiadomosc = msg.content
   if (!wiadomosc)
   {
-    msg.delete()
+
     msg.author.send("Na tym kanale nie można wysyłać zdjęć. Możesz spróbować podobnie za 15 minut.")
   }
   else
@@ -283,8 +283,8 @@ if ( msg.channel.id === "716438067895992422")
     const embed = new RichEmbed()
     .setDescription(wiadomosc)
     .setColor("#37eb34")
-    msg.channel.send(embed)
-    msg.guild.me.setNickname('DreamDiscord')
+    msg.channel.send(embed).then(msg.guild.me.setNickname('DreamDiscord'))
+    
   }
 }
 
