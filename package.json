@@ -26,7 +26,10 @@
   "dependencies": {
     "ascii-table": "0.0.9",
     "chalk": "^3.0.0",
+    "discord-economy": "^1.2.2",
     "discord.js": "^11.5.1",
-    "nodemon": "^2.0.1"
+    "nodemon": "^2.0.1",
+    "sequelize": "^5.21.11",
+    "sqlite3": "^4.2.0"
   }
 }
