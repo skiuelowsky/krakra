@@ -5,9 +5,9 @@ module.exports = {
     run(msg, args) {
       const {Client, RichEmbed, GuildMember} = require("discord.js")
       const { author, guild, channel,} = msg
-      if (msg.content === ".zweryfikuj")
+      if (msg.channel.id === "715134978068971556")
       {
-        if (msg.channel.id === "715134978068971556")
+        if (msg.content === ".zweryfikuj")
         {
             msg.delete()
             const verifyrole = msg.guild.roles.find(r => r.id === "715134977859387438")
@@ -20,10 +20,17 @@ module.exports = {
         else
         {
             const embed = new RichEmbed()
-            .setTitle("Jesteś już zweryfikowany!")
+            .setTitle("Napisałeś coś innego niż **.zweryfikuj** spróbuj jeszcze raz.")
             .setColor("RED")
             channel.send(embed)
         }
+      }
+      else
+      {
+        const embed = new RichEmbed()
+        .setTitle("Jesteś już zweryfikowany!")
+        .setColor("RED")
+        channel.send(embed)
       }
     },
 }
