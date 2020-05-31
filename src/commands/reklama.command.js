@@ -1,5 +1,5 @@
 module.exports = {
-    name: ".reklama",
+    name: "reklama",
     description: "reklama serwera",
   
     run(msg, args) {
