@@ -11,8 +11,8 @@ module.exports = {
     
       "Na serwerze DreamDiscord jest promocja. \n"+
       "Wystarczy, że zaprosisz na serwer 2 osoby a będziesz mógł \n"+
-      "otrzymać autorskiego\n"+
-      "bota za darmo! Jak się zakwalifikować do promocji? Wszystkie s\n"+
+      "otrzymać autorskiego bota za darmo!\n"+
+      "Jak się zakwalifikować do promocji? Wszystkie\n"+
       "szczegóły można zobaczyć na serwerze\n"+
       "Nasza strona: http://katosh.pl/\n"+
       "Invitelink:  https://discord.gg/hsEHcZY\n"+
