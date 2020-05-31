@@ -271,6 +271,11 @@ if (msg.content.startsWith(".klient"))
 if ( msg.channel.id === "716438067895992422")
 {
   let wiadomosc = msg.content
+  if (!wiadomosc)
+  {
+    msg.author.send("Nie wpisuj do propozycji zdjęć. Możesz spróbować podobnie za 15 minut.")
+    return
+  }
   msg.delete()
   msg.guild.me.setNickname(msg.author.username)
   const embed = new RichEmbed()
