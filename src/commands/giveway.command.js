@@ -6,7 +6,7 @@ module.exports = {
         const {Client, RichEmbed, GuildMember} = require("discord.js")
         const { author, guild, channel,} = msg
         
-        channel.send("elo")
+        let msg = await msg.channel.send("elo")
         await msg.react("💚")
 
     },
