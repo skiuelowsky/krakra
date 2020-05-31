@@ -307,7 +307,7 @@ if (msg.content.startsWith("https://discord.gg/"))
   const channel = guild.channels.find(channel => channel.id === "715134978068971559")
   const logi = new RichEmbed()
   .setTitle("Niechciane zaproszenie.")
-  .setDescription(`Użytkownik: ${msg.author} \nKanał: ${msg.channel.name}`)
+  .setDescription(`Użytkownik: ${msg.author} \nKanał: ${msg.channel}`)
   .setColor("#ff0f1b")
   channel.send(logi)
 
