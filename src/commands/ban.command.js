@@ -1,82 +1,59 @@
 module.exports = {
-    name: "ban",
-    description: "banuje użytkownika",
-  
-    run(msg, args) {
-      const {Client, RichEmbed, GuildMember} = require("discord.js")
-      const { author, guild, channel,} = msg
-      if (msg.content.startsWith('.ban')) {
-        if (msg.member.hasPermission("BAN_MEMBERS")){
-        const user = msg.mentions.users.first();
-      
-        if (user) {
-      
-          const member = msg.guild.member(user);
-      
-          if (member) {
-      
-            member
-              .ban({
-                reason: 'Nie ma co plakać',
-              })
-              .then(() => {
-      
-                const embed = new RichEmbed()
-      
-                .setTitle(`${user.tag} został zbanowany!`)
-          
-          
-                .setColor(0xfb0b0b)
-                
-                channel.send(embed);
-              })
-              .catch(err => {
-      
-                const embed = new RichEmbed()
-      
-                .setTitle(`Nie mogę go zbanować!`)
-          
-          
-                .setColor(0xfb0b0b)
-                
-                channel.send(embed);
-      
-                console.error(err);
-              });
-          } else {
-      
-            const embed = new RichEmbed()
-      
-            .setTitle(`Tego użytkownika nie ma na tym chacie!`)
-      
-      
-            .setColor(0xfb0b0b)
-            
-            channel.send(embed);
-          }
-        } else {
-      
-          const embed = new RichEmbed()
-      
-          .setTitle(`To się robi tak: .ban @nazwa`)
-      
-      
-          .setColor(0xfb0b0b)
-          
-          channel.send(embed);
-        }
-      }
-      else
+  name: "ban",
+  description: "Banuje danego użytkownika",
+
+  run(msg, args) {
+    const {Client, RichEmbed, GuildMember} = require("discord.js")
+    const { author, guild, channel,} = msg
+    if (msg.content.startsWith('.kick')) {
+     if (msg.member.hasPermission("KICK_MEMBERS"))
+     {
+        const user = msg.mentions.users.first()
+        const member = msg.guild.member(user)
+        if (!powod)
         {
           const embed = new RichEmbed()
-      
-          .setTitle(`Za cienki w uszach jesteś`)
-      
-      
-          .setColor(0xfb0b0b)
-        
-          channel.send(embed);
+          .setTitle("Poprawne użycie to: .ban powód użytkownik")
+          .setColor("RED")
+          msg.channel.send(embed)
+          return
         }
-      }
-    },
+        if (!member)
+        {
+          const embed = new RichEmbed()
+          .setTitle("Poprawne użycie to: .ban powód użytkownik")
+          .setColor("RED")
+          msg.channel.send(embed)
+          return
+        }
+        
+      
+          member.ban(powod)
+          const embed = new RichEmbed()
+          .setTitle("Użytkownik został zbanowany!")
+          .setColor("RED")
+          msg.channel.send(embed)
+
+          const channel = guild.channels.find(channel => channel.id === "715134978068971559")
+
+
+
+          const logi = new RichEmbed()
+          .setTitle("Użytkownik został zbanowany!")
+          .addField("Użytkownik:",msg.author)
+          .addField("Kanał:",msg.channel)
+          .setColor("#ff0f1b")
+          channel.send(logi)
+        
+        
+     }
+     else
+     {
+       const embed = new RichEmbed()
+       .setTitle("Za cienki w uszach jesteś koleś.")
+       .setColor("RED")
+       msg.channel.send(embed)
+     }
+    }
+  },
 }
