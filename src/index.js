@@ -344,8 +344,8 @@ if (msg.channel.id === "715134978068971556")
 
 if (msg.channel.id === "715134978383675443")
 {
-  msg.react("👍")
-  msg.react("👎")
+  msg.react("👍").then(msg.react("👎"))
+  
 }
 
         });
