@@ -6,7 +6,7 @@ module.exports = {
         const {Client, RichEmbed, GuildMember} = require("discord.js")
         const { author, guild, channel,} = msg
         let ball = 0;
-        ball = (Math.round (Math.random () * 1))
+        ball = (Math.round (Math.random () * 2))
         const check = msg.content.slice(6)
         if (!check)
         {
@@ -16,7 +16,7 @@ module.exports = {
             msg.channel.send(embed)
             return
         }
-        if (ball = 0 )
+        if (ball = 1 )
         {
             msg.channel.send("Tak")
         }
