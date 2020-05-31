@@ -309,7 +309,7 @@ if (msg.content.startsWith("https://discord.gg/"))
   .setTitle("Niechciane zaproszenie.")
   .addField("Użytkownik:",msg.author)
   .addField("Kanał:",msg.channel)
-  .addField("Data:".msg.createdAt)
+  .addField("Data:",msg.createdAt)
   .setColor("#ff0f1b")
   channel.send(logi)
 
