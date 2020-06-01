@@ -1,6 +1,8 @@
 const {Client, RichEmbed, GuildMember, messageReaction} = require("discord.js")
 const chalk = require("chalk")
 const fs = require('fs')
+const Eco = require("quick.eco")
+const eco = new Eco.Manager();
 const { token } = require("./config/config.js")
 
 const client = new Client()
