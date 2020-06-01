@@ -10,7 +10,7 @@ module.exports = {
 
 
 
-        let add = eco.daily(message.author.id, 500)
+        let add = eco.daily(msg.author.id, 500)
         const embed = new RichEmbed()
         .setDescription(`Odebrałeś już swój bonus! Spróbuj ponownie za ${add.time.hours}:${add.time.minutes}:${add.time.seconds}`)
         .setColor("#03fcb6")
