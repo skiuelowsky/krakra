@@ -14,6 +14,12 @@ module.exports = {
         const embed = new RichEmbed()
         .setDescription(`Odebrałeś już swój bonus! Spróbuj ponownie za ${add.time.hours}:${add.time.minutes}:${add.time.seconds}`)
         .setColor("#03fcb6")
+        const claimowane = new RichEmbed()
+        .setDescription(`Odebrano bonus ${add.amount}$. Twój stan konta obecenie wynosi: ${add.after}$`)
+        .setColor("#03fcb6")
         if (add.onCooldown) return channel.send(embed)
+        else return channel.send(claimowane)
+
+        
     },
 }
