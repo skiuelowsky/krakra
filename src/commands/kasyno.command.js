@@ -29,7 +29,7 @@ module.exports = {
     if (gamble.output === "lost") wynik = "Przegrałeś"
     if (gamble.output === "win") wynik = "Wygrałeś"
     const nowybalans = new RichEmbed()
-    .setDescription(`${wnik}! Stan konta: ${gamble.newbalance}`)
+    .setDescription(`${wynik}! Stan konta: ${gamble.newbalance}`)
     .setColor("#03fc94")
     channel.send(nowybalans)
      },
