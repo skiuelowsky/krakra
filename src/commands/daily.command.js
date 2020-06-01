@@ -8,8 +8,12 @@ module.exports = {
         const Eco = require("quick.eco")
         const eco = new Eco.Manager();
 
-        let add = eco.daily(message.author.id, 500);
-        if (add.onCooldown) return message.reply(`You already claimed your daily coins. Come back after ${add.time.days} days, ${add.time.hours} hours, ${add.time.minutes} minutes & ${add.time.seconds} seconds.`);
-        else return message.reply(`you claimed ${add.amount} as your daily coins and now you have total ${add.after} coins.`);
+
+
+        let add = eco.daily(message.author.id, 500)
+        const embed = new RichEmbed()
+        .setDescription(`Odebrałeś już swój bonus! Spróbuj ponownie za ${add.time.hours}:${add.time.minutes}:${add.time.seconds}`)
+        .setColor("#03fcb6")
+        if (add.onCooldown) return channel.send(embed)
     },
 }
