@@ -10,7 +10,7 @@ module.exports = {
 
         const kasa = eco.fetchMoney(msg.author.id)
         const embed = new RichEmbed()
-        .setDescription(`Twój stan konta wynosi:${kasa}`)
+        .setDescription(`Twój stan konta wynosi:${kasa.amount}`)
         .setColor("#03fcb6")
         channel.send(embed)
         
