@@ -8,7 +8,7 @@ module.exports = {
         const Eco = require("quick.eco")
         const eco = new Eco.Manager();
 
-        const kasa = fetchMoney(msg.author.id)
+        const kasa = await fetchMoney(msg.author.id)
         const embed = new RichEmbed()
         .setDescription(`Twój stan konta wynosi:${kasa}`)
         .setColor("#03fcb6")
