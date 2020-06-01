@@ -12,7 +12,7 @@ module.exports = {
         const embed = new RichEmbed()
         .setDescription(`Twój stan konta wynosi:${kasa}`)
         .setColor("#03fcb6")
-
+        channel.send(embed)
         
 
     },
